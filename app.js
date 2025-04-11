@@ -1,3 +1,4 @@
+const cors = require('cors');
 require('dotenv').config();
 
 const express = require('express');
@@ -29,11 +30,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'https://nutri-frontend-five.vercel.app', // Change this to your frontend's Vercel URL
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] // Make sure OPTIONS is included
-}));
+    }));
 
 
 
