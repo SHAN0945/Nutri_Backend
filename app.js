@@ -27,12 +27,12 @@ const app = express();
 
 // Middleware
 
-
-  app.use(cors({
-    origin: 'http://127.0.0.1:5501',  
+// Middleware
+app.use(cors({
+    origin: 'https://nutri-frontend-five.vercel.app', // Change this to your frontend's Vercel URL
     credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'] // Make sure OPTIONS is included
 }));
 
 
