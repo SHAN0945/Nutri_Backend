@@ -24,7 +24,10 @@ console.log(waterRoutes);
 console.log(appointmentRoutes);
 
 const corsOptions = {
-    origin: "*"
+    origin: "https://nutri-frontend-five.vercel.app/",
+    credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
   };
   
 const app = express();
