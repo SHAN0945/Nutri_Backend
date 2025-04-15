@@ -5,7 +5,6 @@ const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
-const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 
@@ -25,8 +24,6 @@ console.log(waterRoutes);
 console.log(appointmentRoutes);
 
 const app = express();
-
-// Middleware
 
 // Middleware
 app.use(cors({
