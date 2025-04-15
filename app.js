@@ -26,10 +26,7 @@ console.log(appointmentRoutes);
 const app = express();
 
 // Middleware
-app.use(cors({
-    origin: "*"
-}));
-app.options("*", cors());
+app.use(cors());
 
 
 app.use(express.json());
