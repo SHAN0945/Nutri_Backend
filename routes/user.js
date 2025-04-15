@@ -4,9 +4,11 @@ const User = require('../models/user');
 const Meal = require('../models/Meal');
 const Water = require('../models/water');
 const auth = require('../routes/auth');
+const cors = require('cors');
+
 
 // Get user data
-router.get('/', async (req, res) => {
+router.get('/',cors(), async (req, res) => {
     try {
         const userId = req.query.userId || req.params.userId 
         if (!userId) {
