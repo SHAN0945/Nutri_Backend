@@ -30,14 +30,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    }));
-
-    // app.options('*', cors());
-    app.options("*", cors({
-        origin: allowedOrigins,
-        credentials: true,
-      }));
-      
+    origin: "*", // Allow all origins
+    credentials: true, 
+}));
+app.options("*", cors());
 
 
 app.use(express.json());
