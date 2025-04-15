@@ -27,8 +27,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: "*", // Allow all origins
-    credentials: true, 
+    origin: "*"
 }));
 app.options("*", cors());
 
@@ -88,9 +87,5 @@ app.get('/profile', authMiddleware, (req, res) => {
 
 // Start Server
 const PORT = process.env.PORT || 5000;
-const allowedOrigins = [
-    "http://localhost:5501",
-    "https://nutri-frontend-five.vercel.app"
-  ];
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
