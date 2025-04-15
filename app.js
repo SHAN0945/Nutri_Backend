@@ -23,10 +23,13 @@ console.log(mealRoutes);
 console.log(waterRoutes);
 console.log(appointmentRoutes);
 
+const corsOptions = {
+    origin: "*"
+  };
+  
 const app = express();
-
-// Middleware
-app.use(cors());
+  
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
